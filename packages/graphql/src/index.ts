@@ -10,7 +10,7 @@ const typeDefs = `#graphql
   }
 
   type Query {
-    users: [User]
+    users: [User!]!
   }
 `;
 

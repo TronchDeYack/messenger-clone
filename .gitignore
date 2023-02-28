@@ -1,3 +1,4 @@
 node_modules
 dist/
 packages/backend/postgresdata
+packages/frontend/src/__generated__

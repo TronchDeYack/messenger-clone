@@ -1,0 +1,12 @@
+{
+  "name": "messenger-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm run -r --parallel --stream dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

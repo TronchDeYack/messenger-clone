@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=slack
+      - POSTGRES_PASSWORD=slack123
+    ports:
+      - "5432:5432"
+    volumes: 
+      - ./packages/backend/postgresdata:/var/lib/postgresql/data
+
+  pgweb:
+    restart: unless-stopped
+    image: sosedoff/pgweb
+    ports: 
+      - "8081:8081" 
+    environment:
+      - DATABASE_URL=postgres://slack:slack123@postgres:5432/slack?sslmode=disable
+    depends_on:
+      - postgres
